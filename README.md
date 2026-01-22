@@ -22,9 +22,9 @@ A specialized Retrieval-Augmented Generation (RAG) system designed to answer com
 
 * Place your source PDF (e.g., budget_speech.pdf) in the project root.
 * Open main.ipynb and run the cells to:
-          Load and split the document.
-          Initialize the vector store.
-          Query the chatbot using the chatbot("your question") function.
+          * Load and split the document.
+          * Initialize the vector store.
+          * Query the chatbot using the chatbot("your question") function.
 
 ## 📋 Installation
 
@@ -32,4 +32,5 @@ A specialized Retrieval-Augmented Generation (RAG) system designed to answer com
    ```bash
    git clone [https://github.com/PavithraPN-01/rag-intelligent-retriever.git](https://github.com/PavithraPN-01/rag-intelligent-retriever.git)
    cd rag-intelligent-retriever
+
 
