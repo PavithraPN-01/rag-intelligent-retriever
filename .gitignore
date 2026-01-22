@@ -1,1 +1,11 @@
+# Data files
+budget_speech.pdf
+*.pdf
+
+# Environment and API keys
 .env
+venv/
+env/
+
+# Jupyter artifacts
+.ipynb_checkpoints/
