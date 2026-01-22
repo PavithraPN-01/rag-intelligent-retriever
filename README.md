@@ -1,23 +1,34 @@
-# AI Text Generation with DistilGPT2
+# RAG Intelligent Retriever
 
-This repository contains a simple Python script that uses a Pre-trained Transformer model to generate text completions.
+A specialized Retrieval-Augmented Generation (RAG) system designed to answer complex questions based on the **Government of India Budget 2025-2026 Speech**. This project utilizes a modern AI stack to process PDF documents, create vector embeddings, and generate precise answers using the Groq LLM.
 
-## Overview
-The script uses the [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) library to load `distilgpt2`. This is a lightweight, faster version of GPT-2 that performs similarly while using fewer computational resources.
 
-## Features
-* **Text Generation:** Provides creative continuations for any text prompt.
-* **Repetition Control:** Uses a `repetition_penalty` to ensure diverse output.
-* **Batch Generation:** Configured to return multiple sequences for comparison.
 
-## Getting Started
+## 🚀 Features
+* **PDF Processing**: Seamlessly loads and parses large PDF documents (e.g., the 60-page Budget Speech) using `PyPDFLoader`.
+* **Intelligent Chunking**: Breaks down dense text into manageable segments with overlap to preserve context during retrieval.
+* **Vector Search**: Uses `FAISS` and `HuggingFaceEmbeddings` for high-performance similarity searches.
+* **Groq Integration**: Leverages the `llama3-8b-8192` model via Groq for rapid, high-quality response generation.
+* **Context-Aware Chat**: A custom chatbot function that strictly references the provided knowledge base to ensure factual accuracy.
 
-### Prerequisites
-* Python 3.8+
-* [PyTorch](https://pytorch.org/)
+## 🛠️ Technical Stack
+* **Orchestration**: LangChain
+* **LLM**: Groq (Llama 3)
+* **Embeddings**: HuggingFace (sentence-transformers)
+* **Vector Database**: FAISS
+* **Environment**: Python (with `python-dotenv` for API security)
 
-### Installation
-1. Clone the repository:
+## 📖 Usage
+
+* Place your source PDF (e.g., budget_speech.pdf) in the project root.
+* Open main.ipynb and run the cells to:
+  ** Load and split the document.
+  ** Initialize the vector store.
+  ** Query the chatbot using the chatbot("your question") function.
+
+## 📋 Installation
+
+1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-   cd YOUR_REPO_NAME
+   git clone [https://github.com/PavithraPN-01/rag-intelligent-retriever.git](https://github.com/PavithraPN-01/rag-intelligent-retriever.git)
+   cd rag-intelligent-retriever
